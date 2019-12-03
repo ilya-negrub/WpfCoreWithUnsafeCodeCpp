@@ -53,7 +53,6 @@ namespace WpfUi
             //IntPtr ptr = BitmapFiltersAPI.CreateBitmapFilterRed();
             BitmapFiltersAPI.SetPixels(ptr, pixels, pixels.Length);
             BitmapFiltersAPI.Update(ptr);
-            //System.Threading.Thread.Sleep(1000);
             int length = 0;            
             IntPtr intPtrBytes = BitmapFiltersAPI.GetPixels(ptr, ref length);
             Marshal.Copy(intPtrBytes, pixelsInvert, 0, length);
